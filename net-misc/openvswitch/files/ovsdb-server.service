@@ -1,0 +1,27 @@
+[Unit]
+Description=Open vSwitch Database Server
+Documentation=man:ovsdb-server
+
+[Service]
+# The file can be shared for this as this values are prone to change
+# and that way we don't need to update them in two different places
+Environment="DB_SOCKET=/var/run/openvswitch/db.sock"
+Environment="REMOTE_DB=db:Open_vSwitch,Open_vSwitch,manager_options"
+Environment="PRIVATE_KEY=db:Open_vSwitch,SSL,private_key"
+Environment="CERTIFICATE=db:Open_vSwitch,SSL,certificate"
+Environment="BOOTSTRAP_CA_CERT=db:Open_vSwitch,SSL,ca_cert"
+ExecStartPre=modprobe openvswitch
+ExecStartPre=/usr/sbin/ovsdb-tool create /var/lib/openvswitch/conf.db /usr/share/openvswitch/vswitch.ovsschema
+# ExecStart=/usr/sbin/ovsdb-server --monitor \
+# 		--remote=punix:${DB_SOCKET} \
+# 		--remote=${REMOTE_DB} \
+# 		--private-key=${PRIVATE_KEY} \
+# 		--certificate=${CERTIFICATE} \
+# 		--bootstrap-ca-cert=${BOOTSTRAP_CA_CERT}
+ExecStart=/usr/sbin/ovsdb-server /var/lib/openvswitch/conf.db \
+        --remote=punix:/var/run/openvswitch/db.sock \
+        --pidfile \
+        --detach \
+        --log-file
+ExecStartPost=/usr/sbin/ovs-vsctl --no-wait init
+
