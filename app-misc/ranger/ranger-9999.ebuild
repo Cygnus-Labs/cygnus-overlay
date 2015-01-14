@@ -13,7 +13,8 @@ if [[ ${PV} == "9999" ]] ; then
 	inherit git-2
 else
 	SRC_URI="http://nongnu.org/${PN}/${P}.tar.gz"
-	KEYWORDS="~amd64 ~x86"
+    # KEYWORDS="~amd64 ~x86"
+	KEYWORDS="amd64 x86"
 fi
 
 DESCRIPTION="A vim-inspired file manager for the console"
