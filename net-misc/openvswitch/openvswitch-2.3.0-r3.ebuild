@@ -38,8 +38,8 @@ BUILD_TARGETS="all"
 pkg_setup() {
 	if use modules ; then
 		CONFIG_CHECK+=" ~!OPENVSWITCH"
-		kernel_is ge 2 6 32 || die "Linux >= 2.6.32 and <= 3.14 required for userspace modules"
-		kernel_is le 3 14 || die "Linux >= 2.6.32 and <= 3.14 required for userspace modules"
+		kernel_is ge 2 6 32 || die "Linux >= 2.6.32 and <= 3.18 required for userspace modules"
+		kernel_is le 3 18 || die "Linux >= 2.6.32 and <= 3.18 required for userspace modules"
 		linux-mod_pkg_setup
 	else
 		CONFIG_CHECK+=" ~OPENVSWITCH"
