@@ -21,9 +21,9 @@ DEPEND="
 "
 RDEPEND="${DEPEND}"
 
-src_compile(){
-    # source build.sh
-}
+# src_compile(){
+#     # source build.sh
+# }
 
 src_install(){
     dobin pipework
