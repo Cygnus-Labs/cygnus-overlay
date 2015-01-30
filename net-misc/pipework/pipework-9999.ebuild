@@ -27,6 +27,7 @@ RDEPEND="${DEPEND}"
 
 src_install(){
     dobin pipework
+    elog "this should have created a pipework binary from the source in git"
 }
 
 # src_test(){
