@@ -19,6 +19,7 @@ IUSE="vm-testing"
 RDEPEND="
     coreos-base/coreos-dev
     app-misc/ranger
-    app-admin/heka
-    net-misc/openvswitch
+    net-misc/pipework
+    net-misc/openvswitch[-modules,-monitor]
     "
+    # app-admin/heka
