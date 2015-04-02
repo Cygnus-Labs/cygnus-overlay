@@ -18,6 +18,7 @@ IUSE="vm-testing"
 # and debugging failures.
 RDEPEND="
     coreos-base/coreos-dev
+    app-admin/lnav
     app-misc/ranger
     net-misc/pipework
     net-misc/openvswitch[-modules,-monitor]
