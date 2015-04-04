@@ -11,6 +11,9 @@ SLOT="0"
 KEYWORDS="amd64 arm x86"
 IUSE="vm-testing"
 
+# This contains all the extra packages we are adding to CoreOS in.
+# order to build our own customised variant. Fleet is hard to replace,
+# so re-using it via customized CoreOS builds is good enough for now.
 # The dependencies here are meant to capture "all the packages
 # developers want to use for development, test, or debug".  This
 # category is meant to include all developer use cases, including
