@@ -20,7 +20,7 @@ else
 	SRC_URI="https://github.com/zfsonlinux/${PN}/archive/${PN}-${MY_PV}.tar.gz
 		http://dev.gentoo.org/~ryao/dist/${PN}-kmod-${MY_PV}-p2.tar.xz"
 	S="${WORKDIR}/${PN}-${PN}-${MY_PV}"
-	KEYWORDS="~amd64"
+	KEYWORDS="amd64"
 fi
 
 inherit bash-completion-r1 flag-o-matic toolchain-funcs autotools-utils udev systemd
