@@ -14,7 +14,7 @@ else
 	inherit eutils versionator
 	SRC_URI="https://github.com/zfsonlinux/${PN}/archive/spl-0.6.3-1.3.tar.gz"
 	S="${WORKDIR}/${PN}-${P}"
-	KEYWORDS="~amd64"
+	KEYWORDS="amd64"
 fi
 
 DESCRIPTION="The Solaris Porting Layer is a Linux kernel module which provides many of the Solaris kernel APIs"
