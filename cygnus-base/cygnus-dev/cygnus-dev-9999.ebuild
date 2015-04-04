@@ -24,9 +24,9 @@ RDEPEND="
     app-misc/ranger
     net-misc/pipework
     net-misc/openvswitch[-modules,-monitor]
+    sys-fs/zfs[-rootfs,-kernel-builtin]
+    sys-fs/zfs-kmod[-rootfs]
     sys-kernel/spl
-    sys-fs/zfs-kmod
-    sys-fs/zfs
     "
     # app-admin/lnav
     # app-admin/heka

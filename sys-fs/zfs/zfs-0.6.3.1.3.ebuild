@@ -17,7 +17,7 @@ if [ ${PV} == "9999" ] ; then
 else
 	inherit eutils versionator
 	MY_PV=$(replace_version_separator 3 '-')
-	SRC_URI="https://github.com/zfsonlinux/${PN}/archive/${P}.tar.gz"
+	SRC_URI="https://github.com/zfsonlinux/${PN}/archive/zfs-0.6.3-1.3.tar.gz"
 	S="${WORKDIR}/${PN}-${PN}-${MY_PV}"
 	KEYWORDS="~amd64"
 fi
