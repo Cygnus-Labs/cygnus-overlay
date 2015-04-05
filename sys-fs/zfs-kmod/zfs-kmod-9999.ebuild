@@ -14,6 +14,7 @@ if [ ${PV} == "9999" ] ; then
 	inherit git-2
 	MY_PV=9999
 	EGIT_REPO_URI="https://github.com/zfsonlinux/zfs.git"
+	KEYWORDS="amd64"
 else
 	inherit eutils versionator
 	MY_PV=$(replace_version_separator 3 '-')
