@@ -87,6 +87,10 @@ src_configure() {
 
 	set_arch_to_kernel
 	local myeconfargs=(
+		--build=x86_64-pc-linux-gnu
+		# --build=x86_64-cros-linux-gnu
+		--host=x86_64-pc-linux-gnu
+		# --host=x86_64-cros-linux-gnu
 		--bindir="${EPREFIX}/bin"
 		--sbindir="${EPREFIX}/sbin"
 		--with-config=all
